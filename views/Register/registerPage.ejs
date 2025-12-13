@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/users.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="auth-card">
+        <h1>Criar Conta</h1>
+        <p>Cadastro acadêmico</p>
+
+        <div class="input-group">
+            <label>Nome completo</label>
+            <input type="text" placeholder="Seu nome" id="nome" name="nome">
+        </div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="exemplo@email.com" id="email" name="email">
+        </div>
+
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" placeholder="••••••••" id="senha" name="senha">
+        </div>
+
+        <div class="input-group">
+            <label>Confirmar senha</label>
+            <input type="password" placeholder="••••••••" id="confSenha" name="confSenha">
+        </div>
+
+        <div class="input-group select-group">
+            <label for="tipo">Tipo de usuário</label>
+            <select name="tipo" id="tipo" class="select-auth">
+                <option value="" disabled selected>Selecione o tipo</option>
+                <option value="1">Aluno</option>
+                <option value="2">Professor</option>
+            </select>
+        </div>
+
+        <button id="btnRegister" type="button">Registrar</button>
+
+        <span class="link">
+            Já possui conta?
+            <a href="login">Fazer login</a>
+        </span>
+    </div>
+</div>
+<script src="/js/user/registrar.js"></script>
+</body>
+</html>
