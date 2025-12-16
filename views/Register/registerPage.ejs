@@ -37,8 +37,9 @@
             <label for="tipo">Tipo de usuário</label>
             <select name="tipo" id="tipo" class="select-auth">
                 <option value="" disabled selected>Selecione o tipo</option>
-                <option value="1">Aluno</option>
-                <option value="2">Professor</option>
+                <% for(let i = 0; i < result.length; i++) { %>
+                    <option value="<%= result[i].perID %>"><%= result[i].perTipo %></option>
+                <% } %>
             </select>
         </div>
 
@@ -50,6 +51,6 @@
         </span>
     </div>
 </div>
-<script src="/js/user/registrar.js"></script>
+<script src="/js/user/register.js"></script>
 </body>
 </html>

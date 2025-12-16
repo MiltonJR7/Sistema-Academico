@@ -10,18 +10,21 @@
 
 <div class="auth-container">
 
-    <div class="auth-card">
+    <div class="auth-card" id="cardLogin">
+        <div class="error" id="errorAccount"></div>
         <h1>Login</h1>
         <p>Acesse o sistema de gestão</p>
 
         <div class="input-group">
             <label for="email">Email</label>
             <input type="email" placeholder="exemplo@email.com" id="email" name="email">
+            <div class="error" id="errorEmail"></div>
         </div>
 
         <div class="input-group">
             <label for="senha">Senha</label>
             <input type="password" placeholder="••••••••" id="senha" name="senha">
+            <div class="error" id="errorSenha"></div>
         </div>
 
         <button id="btnLogar" type="button">Entrar</button>
@@ -32,6 +35,6 @@
         </span>
     </div>
 </div>
-<script src="/js/user/cadastro.js"></script>
+<script src="/js/user/login.js"></script>
 </body>
 </html>

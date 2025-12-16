@@ -8,19 +8,22 @@ document.addEventListener('DOMContentLoaded', ()=> {
         const email = document.getElementById('email');
         const senha = document.getElementById('senha');
         const confSenha = document.getElementById('confSenha');
+        const tipo = document.getElementById('tipo');
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let listaValidar = [];
 
         if(nome.value === "") { listaValidar.push(nome); } else { nome.style.borderColor = "#4b6cb7"; }
         if(email.value === "" || !regexEmail.test(email.value)) { listaValidar.push(email); } else { email.style.borderColor = "#4b6cb7"; }
         if(senha.value === "" || senha.value !== confSenha.value || senha.value.length < 6) { listaValidar.push(senha); listaValidar.push(confSenha)} else { senha.style.borderColor = "#4b6cb7"; confSenha.style.borderColor = "#4b6cb7";}
+        if(tipo.value === "") { listaValidar.push(tipo); } else { tipo.style.borderColor = "#4b6cb7"; }
 
         if(listaValidar.length == 0) {
 
             let obj = {
                 nome: nome.value,
                 email: email.value,
-                senha: senha.value
+                senha: senha.value,
+                tipo: tipo.value
             }
 
             fetch('/user/register', {
@@ -30,15 +33,20 @@ document.addEventListener('DOMContentLoaded', ()=> {
                 },
                 body: JSON.stringify(obj)
             })
-            .then((res), ()=> {
+            .then((res)=> {
                 return res.json();
             })
-            .then((corpo), ()=> {
+            .then((corpo)=> {
                 if(corpo.ok) {
                     alert("Usuario registrado com sucesso!");
                     window.location.href = "/user/login";
                 } else {
                     alert("ERROR IN INPUTS!!!");
+                    nome.value = "";
+                    email.value = "";
+                    senha.value = "";
+                    confSenha.value = "";
+                    tipo.value = "";
                 }
             })
 

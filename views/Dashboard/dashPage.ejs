@@ -27,6 +27,7 @@
 
     <!-- Conteúdo principal -->
     <main class="main">
+
         <header class="header">
             <h1>Painel de Controle</h1>
             <span>Usuário Acadêmico</span>
@@ -56,36 +57,34 @@
         <section class="content">
             <h2>Últimos Registros</h2>
 
-            <table>
+            <!-- Barra de busca -->
+            <div class="search-container">
+                <input 
+                    type="text"
+                    id="busca"
+                    placeholder="Buscar por nome ou email..."
+                >
+                <button id="btnBuscar">Buscar</button>
+            </div>
+
+            <table id="usuarios">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Nome</th>
+                        <th>Email</th>
+                        <th>Senha</th>
                         <th>Tipo</th>
-                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>João Silva</td>
-                        <td>Aluno</td>
-                        <td>Ativo</td>
-                    </tr>
-                    <tr>
-                        <td>Maria Souza</td>
-                        <td>Professor</td>
-                        <td>Ativo</td>
-                    </tr>
-                    <tr>
-                        <td>Turma ADS</td>
-                        <td>Turma</td>
-                        <td>Em andamento</td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </section>
     </main>
 
 </div>
-
+<script src="/js/dashboard/listarComFiltro.js"></script>
 </body>
 </html>

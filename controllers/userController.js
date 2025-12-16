@@ -1,3 +1,4 @@
+import PerfilModel from "../models/perfilModel.js";
 import UserModel from "../models/userModel.js";
 
 
@@ -6,8 +7,10 @@ export default class UserController {
         res.render('login/loginPage', { layout: false });
     }
 
-    registerView(req, res) {
-        res.render('register/registerPage', { layout: false });
+    async registerView(req, res) {
+        let banco = new PerfilModel();
+        const result = await banco.listarTipo();
+        res.render('register/registerPage', { layout: false, result: result});
     }
 
     async login(req, res) {
@@ -16,7 +19,7 @@ export default class UserController {
 
         if(req.body.email !== null && req.body.senha !== null) {
             let banco = new UserModel();
-            banco = await banco.cadastrar(req.body.email, req.body.senha);
+            banco = await banco.logar(req.body.email, req.body.senha);
 
             if(banco != null) {
                 ok = true;
@@ -38,6 +41,24 @@ export default class UserController {
     }
 
     async register(req, res) {
-        
+        let ok = false;
+        let msg = "";
+        const {nome, email, senha, tipo} = req.body;
+
+        if(nome && email && senha && tipo) {
+            const banco = new UserModel(0, nome, email, senha, tipo);
+            let result = await banco.cadastrar();
+
+            if(result) {
+                ok = true;
+                res.send({ok: ok});
+            } else {
+                ok = false;
+                res.send({ok: ok});
+            }
+        } else {
+            ok = false;
+            res.send({ok: ok});
+        }
     }
 }
