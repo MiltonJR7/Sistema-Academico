@@ -2,7 +2,6 @@
 export default class HomeController {  
     
     homeView(req, res) {
-        res.render('home/sobre', { layout: 'layout' });
+        res.render('home/homePage', { layout: 'layout' });
     }
-
 }

@@ -1,21 +1,45 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia de Ciências - Educação de Excelência</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
-
-<body>
+  <body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-logo">My School</a>
-            <ul class="navbar-menu">
-                <li><a href="#sobre">Sobre</a></li>
-            </ul>
+      <div class="nav-container">
+        <div class="nav-brand">
+          <h1>Academia de Ciências</h1>
         </div>
+
+        <div class="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#cursos" class="nav-link">Cursos</a>
+          <a href="#sobre" class="nav-link">Sobre</a>
+          <a href="#contato" class="nav-link">Contato</a>
+        </div>
+
+        <div class="profile-menu">
+          <input type="checkbox" id="profile-toggle" class="profile-toggle">
+          <label for="profile-toggle" class="profile-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+            </svg>
+          </label>
+          <div class="dropdown-menu">
+            <a href="/user/login" class="dropdown-item">Login</a>
+            <a href="#perfil" class="dropdown-item">Perfil</a>
+            <a href="#logout" class="dropdown-item">Logout</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <div>
@@ -23,9 +47,41 @@
     </div>
 
     <footer class="footer">
-        <p>&copy; 2025 Minha Empresa - Todos os direitos reservados.</p>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Academia de Ciências</h3>
+          <p>Educação de excelência desde 1994</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#cursos">Cursos</a></li>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#biblioteca">Biblioteca</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Informações</h4>
+          <ul>
+            <li><a href="#privacidade">Política de Privacidade</a></li>
+            <li><a href="#termos">Termos de Uso</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <p>contato@academiaciencias.edu.br</p>
+          <p>(11) 1234-5678</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Academia de Ciências. Todos os direitos reservados.</p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

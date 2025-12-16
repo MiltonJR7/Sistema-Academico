@@ -1,15 +1,23 @@
 {
   "name": "code_zero",
   "version": "1.0.0",
-  "description": "",
+  "description": "Este projeto é o desenvolvimento de um **sistema de gestão escolar com foco exclusivo em Back End**, voltado para o estudo e aplicação prática de **modelagem de banco de dados, regras de negócio e autenticação**.",
+  "homepage": "https://github.com/MiltonJR7/Sistema-Academico#readme",
+  "bugs": {
+    "url": "https://github.com/MiltonJR7/Sistema-Academico/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiltonJR7/Sistema-Academico.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.3",
