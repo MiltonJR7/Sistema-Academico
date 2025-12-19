@@ -17,7 +17,6 @@ export default class DashController {
 
         const banco = new UserModel();
         let lista = await banco.usuariosFiltro(termo);
-
         res.json({ lista });
     }
 }

@@ -15,76 +15,279 @@
     <aside class="sidebar">
         <h2>Gestão</h2>
         <nav>
-            <a class="active">Dashboard</a>
-            <a>Admins</a>
-            <a>Alunos</a>
-            <a>Professores</a>
-            <a>Turmas</a>
-            <a>Relatórios</a>
-            <a>Configurações</a>
+            <button class="active rotaDash" data-idPageIncial="inicial-page">Dashboard</button>
+            <button class="rotaDash" data-idPageAdmin="admin-page">Admins</button>
+            <button class="rotaDash" data-idPageAlunos="students-page">Alunos</button>
+            <button class="rotaDash" data-idPageProfessores="teachers-page">Professores</button>
+            <button class="rotaDash" data-idPageTurmas="classes-page">Turmas</button>
+            <button class="rotaDash" data-idPageRelatorios="">Relatórios</button>
+            <button class="rotaDash" data-idPageConfiguracoes="">Configurações</button>
         </nav>
     </aside>
 
     <!-- Conteúdo principal -->
-    <main class="main">
+    <div id="inicial-page">
+        <main class="main">
 
-        <header class="header">
-            <h1>Painel de Controle</h1>
-            <span>Usuário Acadêmico</span>
-        </header>
+            <header class="header">
+                <h1>Painel de Controle</h1>
+                <span>Usuário Acadêmico</span>
+            </header>
 
-        <!-- Cards -->
-        <section class="cards">
-            <div class="card">
-                <h3>Alunos</h3>
-                <p>320</p>
-            </div>
-            <div class="card">
-                <h3>Professores</h3>
-                <p>25</p>
-            </div>
-            <div class="card">
-                <h3>Turmas</h3>
-                <p>18</p>
-            </div>
-            <div class="card">
-                <h3>Ativos</h3>
-                <p>98%</p>
-            </div>
-        </section>
+            <!-- Cards -->
+            <section class="cards">
+                <div class="card">
+                    <h3>Alunos</h3>
+                    <p>320</p>
+                </div>
+                <div class="card">
+                    <h3>Professores</h3>
+                    <p>25</p>
+                </div>
+                <div class="card">
+                    <h3>Turmas</h3>
+                    <p>18</p>
+                </div>
+                <div class="card">
+                    <h3>Ativos</h3>
+                    <p>98%</p>
+                </div>
+            </section>
 
-        <!-- Conteúdo -->
-        <section class="content">
-            <h2>Últimos Registros</h2>
+            <!-- Conteúdo -->
+            <section class="content">
+                <h2>Últimos Registros</h2>
 
-            <!-- Barra de busca -->
-            <div class="search-container">
-                <input 
-                    type="text"
-                    id="busca"
-                    placeholder="Buscar por nome ou email..."
-                >
-                <button id="btnBuscar">Buscar</button>
-            </div>
+                <!-- Barra de busca -->
+                <div class="search-container">
+                    <input 
+                        type="text"
+                        id="busca"
+                        placeholder="Buscar por nome ou email..."
+                    >
+                    <button id="btnBuscar">Buscar</button>
+                </div>
 
-            <table id="usuarios">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Senha</th>
-                        <th>Tipo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
-        </section>
-    </main>
+                <table id="usuarios">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Senha</th>
+                            <th>Tipo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div id="admin-page" style="display: none;">
+        <main class="main">
+            <header class="header">
+                <h1>Painel de Administradores</h1>
+                <span>Gestão Administrativa</span>
+            </header>
+
+            <section class="cards">
+                <div class="card">
+                    <h3>Admins</h3>
+                    <p>8</p>
+                </div>
+                <div class="card">
+                    <h3>Ativos</h3>
+                    <p>100%</p>
+                </div>
+                <div class="card">
+                    <h3>Acessos Hoje</h3>
+                    <p>42</p>
+                </div>
+                <div class="card">
+                    <h3>Permissões</h3>
+                    <p>Completo</p>
+                </div>
+            </section>
+
+            <section class="content">
+                <h2>Administradores Cadastrados</h2>
+
+                <div class="search-container">
+                    <input type="text" id="busca" placeholder="Buscar por nome ou email...">
+                    <button id="btnBuscar">Buscar</button>
+                </div>
+
+                <table id="usuarios">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Nível</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div id="students-page" style="display: none;">
+        <main class="main">
+            <header class="header">
+                <h1>Painel de Alunos</h1>
+                <span>Gestão Acadêmica</span>
+            </header>
+
+            <section class="cards">
+                <div class="card">
+                    <h3>Alunos</h3>
+                    <p>320</p>
+                </div>
+                <div class="card">
+                    <h3>Matriculados</h3>
+                    <p>300</p>
+                </div>
+                <div class="card">
+                    <h3>Ativos</h3>
+                    <p>98%</p>
+                </div>
+                <div class="card">
+                    <h3>Inativos</h3>
+                    <p>20</p>
+                </div>
+            </section>
+
+            <section class="content">
+                <h2>Alunos Cadastrados</h2>
+
+                <div class="search-container">
+                    <input type="text" id="busca" placeholder="Buscar por nome ou matrícula...">
+                    <button id="btnBuscar">Buscar</button>
+                </div>
+
+                <table id="usuarios">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Matrícula</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div id="teachers-page" style="display: none;">
+        <main class="main">
+            <header class="header">
+                <h1>Painel de Professores</h1>
+                <span>Corpo Docente</span>
+            </header>
+
+            <section class="cards">
+                <div class="card">
+                    <h3>Professores</h3>
+                    <p>25</p>
+                </div>
+                <div class="card">
+                    <h3>Ativos</h3>
+                    <p>22</p>
+                </div>
+                <div class="card">
+                    <h3>Disciplinas</h3>
+                    <p>40</p>
+                </div>
+                <div class="card">
+                    <h3>Turmas</h3>
+                    <p>18</p>
+                </div>
+            </section>
+
+            <section class="content">
+                <h2>Professores Cadastrados</h2>
+
+                <div class="search-container">
+                    <input type="text" id="busca" placeholder="Buscar por nome ou email...">
+                    <button id="btnBuscar">Buscar</button>
+                </div>
+
+                <table id="usuarios">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Área</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div id="classes-page" style="display: none;">
+        <main class="main">
+            <header class="header">
+                <h1>Painel de Turmas</h1>
+                <span>Gestão de Classes</span>
+            </header>
+
+            <section class="cards">
+                <div class="card">
+                    <h3>Turmas</h3>
+                    <p>18</p>
+                </div>
+                <div class="card">
+                    <h3>Ativas</h3>
+                    <p>16</p>
+                </div>
+                <div class="card">
+                    <h3>Alunos</h3>
+                    <p>320</p>
+                </div>
+                <div class="card">
+                    <h3>Professores</h3>
+                    <p>25</p>
+                </div>
+            </section>
+
+            <section class="content">
+                <h2>Turmas Registradas</h2>
+
+                <div class="search-container">
+                    <input type="text" id="busca" placeholder="Buscar por nome da turma...">
+                    <button id="btnBuscar">Buscar</button>
+                </div>
+
+                <table id="usuarios">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Turma</th>
+                            <th>Curso</th>
+                            <th>Professor</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+    </div>
 
 </div>
 <script src="/js/dashboard/listarComFiltro.js"></script>
+<script src="/js/dashboard/montarPaginas.js"></script>
 </body>
 </html>

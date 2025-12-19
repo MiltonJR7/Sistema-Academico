@@ -192,3 +192,38 @@ tbody tr:hover {
 .search-container button:hover {
     opacity: 0.9;
 }
+
+
+/* ===== BOTÕES DA SIDEBAR ===== */
+.sidebar nav button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    text-align: left;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+/* Hover e ativo */
+.sidebar nav button:hover,
+.sidebar nav button.active {
+    background: rgba(255, 255, 255, 0.15);
+    padding-left: 18px;
+}
+
+/* Remove foco feio do navegador */
+.sidebar nav button:focus {
+    outline: none;
+}
+
+/* Acessibilidade (teclado) */
+.sidebar nav button:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.6);
+}
+
+

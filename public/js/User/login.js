@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             })
             .then((corpo)=> {
                 if(corpo.ok) {
-                    window.location.href = "/admin/dashboard";
+                    window.location.href = "/dashboard";
                 } else {
                     notAccount(email, senha);
                 }

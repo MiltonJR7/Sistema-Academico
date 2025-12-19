@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
             query = "?termo=" + termo.value;
         }
 
-        fetch("/admin/dashboard/listar" + query)
+        fetch("/dashboard/listar" + query)
         .then((res)=> {
             return res.json();
         })
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', ()=> {
             if(corpo.lista.length > 0) {
                 
                 for(let i = 0; i < corpo.lista.length; i++) {
-                    console.log(corpo.lista[0]);
 
                     let item = corpo.lista[i];
 

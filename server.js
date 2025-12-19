@@ -24,7 +24,7 @@ app.use('/user', userRoute);
 let auth = new AuthMiddleware();
 app.use(auth.verificarUsuarioLogado);
 
-app.use('/admin', dashRoute);
+app.use('/dashboard', dashRoute);
 
 const port = 5000;
 app.listen(port, ()=> { console.log(`Servidor em execução na porta: ${port}`); });
